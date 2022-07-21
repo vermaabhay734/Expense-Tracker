@@ -25,10 +25,15 @@ const App = () => {
     },
   ];
   
+  const addEnpenseHandler = expense => {
+    console.log("In App.ja");
+    console.log(expense);
+  };
+
   return (
     <>
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense = {addEnpenseHandler} />
       <Expenses items={expenses}/>
     </div>
     </>
